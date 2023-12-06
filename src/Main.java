@@ -2,9 +2,16 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
-    public static void calc(String[] input) throws IOException {
+
+    public static void main(String[] args) throws IOException {
         Scanner scanner = new Scanner(System.in);
-        String[] line = scanner.nextLine().split(" ");
+        String request = scanner.nextLine();
+        String answer = calc(request);
+        System.out.println(answer);
+    }
+
+    public static String calc(String request) throws IOException {
+        String[] line = request.split(" ");
         boolean isFirstNumberRoman = false;
         boolean isSecondNumberRoman = false;
         int firstNumber;
@@ -89,10 +96,9 @@ public class Main {
             System.out.println("Введены данные разных типов!");
             throw new IOException();
         }
-        System.out.println(resultChar);
+        return resultChar;
+
+
     }
 
-    public static void main(String[] args) throws IOException {
-        calc(args);
-    }
 }
