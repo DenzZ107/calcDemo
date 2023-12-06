@@ -10,6 +10,7 @@ public class Main {
         System.out.println(answer);
     }
 
+
     public static String calc(String request) throws IOException {
         String[] line = request.split(" ");
         boolean isFirstNumberRoman = false;
